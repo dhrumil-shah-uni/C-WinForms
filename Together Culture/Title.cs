@@ -39,7 +39,7 @@ namespace Together_Culture
                 titletime.Stop();
             };
             titletime.Start();
-            
+
         }
 
         private void mouse_Down(object sender, MouseEventArgs e)
@@ -63,6 +63,9 @@ namespace Together_Culture
 
         }
 
-        
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -15,6 +15,12 @@ namespace Together_Culture
         public Homepage()
         {
             InitializeComponent();
+            
+        }
+
+        private void Homepage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
