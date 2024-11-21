@@ -95,5 +95,26 @@ namespace Together_Culture
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            errorlabel.Text = "Email Sent";
+        }
+
+        private void enter_pressed(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                button1_Click(sender, e);
+            }
+        }
+
+        private void enter_pressed_email(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                passbox.Select();
+            }
+        }
     }
 }

@@ -109,6 +109,7 @@
             // errorlabel
             // 
             errorlabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            errorlabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             errorlabel.ForeColor = Color.Yellow;
             errorlabel.Location = new Point(148, 496);
             errorlabel.Name = "errorlabel";
@@ -157,6 +158,7 @@
             emailbox.Size = new Size(306, 22);
             emailbox.TabIndex = 0;
             emailbox.WordWrap = false;
+            emailbox.KeyPress += enter_pressed_email;
             // 
             // button1
             // 
@@ -186,6 +188,7 @@
             linkLabel1.TabIndex = 2;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Forgot Password?";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // passbox
             // 
@@ -200,6 +203,7 @@
             passbox.Size = new Size(303, 22);
             passbox.TabIndex = 1;
             passbox.UseSystemPasswordChar = true;
+            passbox.KeyPress += enter_pressed;
             // 
             // pictureBox1
             // 
