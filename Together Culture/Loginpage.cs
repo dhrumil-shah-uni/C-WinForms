@@ -22,6 +22,9 @@ namespace Together_Culture
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
+            panel2.BorderStyle = BorderStyle.None;
+            panel2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, 20, 20));
+            
         }
 
         private Point mouseLocation;
@@ -106,6 +109,7 @@ namespace Together_Culture
             if (e.KeyChar == (char)Keys.Enter)
             {
                 button1_Click(sender, e);
+                e.Handled = true;
             }
         }
 
@@ -114,6 +118,7 @@ namespace Together_Culture
             if (e.KeyChar == (char)Keys.Enter)
             {
                 passbox.Select();
+                e.Handled= true;
             }
         }
     }

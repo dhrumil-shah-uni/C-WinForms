@@ -85,14 +85,16 @@
             // 
             // panel2
             // 
+            panel2.AccessibleName = "Searchbox";
+            panel2.AccessibleRole = AccessibleRole.None;
             panel2.Anchor = AnchorStyles.Top;
             panel2.BackColor = Color.FromArgb(253, 253, 253);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(textBox1);
-            panel2.Location = new Point(759, 28);
+            panel2.Location = new Point(38, 30);
             panel2.Name = "panel2";
             panel2.Padding = new Padding(3);
-            panel2.Size = new Size(227, 51);
+            panel2.Size = new Size(227, 43);
             panel2.TabIndex = 0;
             // 
             // pictureBox1
@@ -100,9 +102,9 @@
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(6, 11);
+            pictureBox1.Location = new Point(6, 7);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(35, 35);
+            pictureBox1.Size = new Size(30, 30);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -113,10 +115,10 @@
             textBox1.BackColor = Color.FromArgb(253, 253, 253);
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(47, 14);
+            textBox1.Location = new Point(42, 7);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Search";
-            textBox1.Size = new Size(179, 25);
+            textBox1.Size = new Size(174, 25);
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;
             // 

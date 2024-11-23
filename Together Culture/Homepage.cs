@@ -19,6 +19,10 @@ namespace Together_Culture
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
+            panel2.BorderStyle = BorderStyle.None;
+            panel2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, 20, 20));
+
+            
         }
 
         private Point mouseLocation;
@@ -59,6 +63,13 @@ namespace Together_Culture
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MemData memData = new MemData();
+            memData.Show();
+            this.Hide();
         }
     }
 }
