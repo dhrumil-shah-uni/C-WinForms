@@ -39,6 +39,8 @@
             title = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel3 = new Panel();
+            blogs1 = new Blogs();
+            shop1 = new Shop();
             membershipPage1 = new MembershipPage();
             events1 = new Events();
             home1 = new Home();
@@ -69,7 +71,7 @@
             navlist.ForeColor = Color.FromArgb(253, 253, 253);
             navlist.FormattingEnabled = true;
             navlist.ItemHeight = 25;
-            navlist.Items.AddRange(new object[] { "Home", "Events", "Membership", "Shop", "About", "Admin" });
+            navlist.Items.AddRange(new object[] { "Home", "Events", "Membership", "Shop", "Blogs", "Admin" });
             navlist.Location = new Point(0, 0);
             navlist.Name = "navlist";
             navlist.Size = new Size(172, 623);
@@ -174,10 +176,11 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 85F));
             tableLayoutPanel1.Size = new Size(1200, 750);
             tableLayoutPanel1.TabIndex = 0;
-            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // panel3
             // 
+            panel3.Controls.Add(blogs1);
+            panel3.Controls.Add(shop1);
             panel3.Controls.Add(membershipPage1);
             panel3.Controls.Add(events1);
             panel3.Controls.Add(home1);
@@ -186,6 +189,25 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(1006, 623);
             panel3.TabIndex = 3;
+            // 
+            // blogs1
+            // 
+            blogs1.BackgroundImage = (Image)resources.GetObject("blogs1.BackgroundImage");
+            blogs1.Location = new Point(198, 4);
+            blogs1.Margin = new Padding(3, 4, 3, 4);
+            blogs1.Name = "blogs1";
+            blogs1.Size = new Size(40, 40);
+            blogs1.TabIndex = 4;
+            blogs1.Visible = false;
+            // 
+            // shop1
+            // 
+            shop1.Location = new Point(141, 4);
+            shop1.Margin = new Padding(3, 4, 3, 4);
+            shop1.Name = "shop1";
+            shop1.Size = new Size(40, 40);
+            shop1.TabIndex = 3;
+            shop1.Visible = false;
             // 
             // membershipPage1
             // 
@@ -254,5 +276,7 @@
         private Events events1;
         private Home home1;
         private MembershipPage membershipPage1;
+        private Shop shop1;
+        private Blogs blogs1;
     }
 }

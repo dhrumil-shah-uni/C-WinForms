@@ -84,37 +84,40 @@ namespace Together_Culture
 
         private void onSelectedChange(object sender, EventArgs e)
         {
+            shop1.Visible = false;
+            home1.Visible = false;
+            events1.Visible = false;
+            membershipPage1.Visible = false;
+            blogs1.Visible = false;    
+
+
             switch (navlist.SelectedIndex)
             {
                 case 0:
-                    events1.Visible = false;
-                    membershipPage1.Visible = false;
                     home1.Dock = DockStyle.Fill;
                     home1.Visible = true;
                     break;
                 case 1:
-                    home1.Visible = false;
-                    membershipPage1.Visible=false;
                     events1.Dock = DockStyle.Fill;
                     events1.Visible = true;
                     break;
                 case 2:
-                    home1.Visible = false;
-                    events1.Visible = false;
                     membershipPage1.Dock = DockStyle.Fill;
                     membershipPage1.Visible = true;
                     break;
                 case 3:
+                    shop1.Dock = DockStyle.Fill;
+                    shop1.Visible = true;
+                    break;
                 case 4:
+                    blogs1.Dock = DockStyle.Fill;
+                    blogs1.Visible = true;
+                    break;
                 case 5:
                 default:
                     break;
             }
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

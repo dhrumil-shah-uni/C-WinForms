@@ -126,5 +126,11 @@ namespace Together_Culture
         {
             Application.Exit();
         }
+
+        private void visitorLink_clicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            VisitorForm visitorForm = new VisitorForm();
+            visitorForm.Show();
+        }
     }
 }

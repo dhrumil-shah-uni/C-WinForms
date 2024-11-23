@@ -109,6 +109,7 @@
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Login as a visitor→";
             linkLabel2.TextAlign = ContentAlignment.MiddleCenter;
+            linkLabel2.LinkClicked += visitorLink_clicked;
             // 
             // errorlabel
             // 
