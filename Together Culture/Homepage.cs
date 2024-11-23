@@ -40,7 +40,7 @@ namespace Together_Culture
 
         private void Homepage_Load(object sender, EventArgs e)
         {
-
+            navlist.SelectedIndex = 0;
 
         }
 
@@ -80,6 +80,41 @@ namespace Together_Culture
             Loginpage login_new = new Loginpage();
             login_new.Show();
             this.Close();
+        }
+
+        private void onSelectedChange(object sender, EventArgs e)
+        {
+            switch (navlist.SelectedIndex)
+            {
+                case 0:
+                    events1.Visible = false;
+                    membershipPage1.Visible = false;
+                    home1.Dock = DockStyle.Fill;
+                    home1.Visible = true;
+                    break;
+                case 1:
+                    home1.Visible = false;
+                    membershipPage1.Visible=false;
+                    events1.Dock = DockStyle.Fill;
+                    events1.Visible = true;
+                    break;
+                case 2:
+                    home1.Visible = false;
+                    events1.Visible = false;
+                    membershipPage1.Dock = DockStyle.Fill;
+                    membershipPage1.Visible = true;
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                default:
+                    break;
+            }
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
