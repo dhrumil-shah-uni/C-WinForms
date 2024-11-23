@@ -22,7 +22,7 @@ namespace Together_Culture
             panel2.BorderStyle = BorderStyle.None;
             panel2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, 20, 20));
 
-            
+            this.Select();
         }
 
         private Point mouseLocation;
@@ -41,7 +41,10 @@ namespace Together_Culture
         private void Homepage_Load(object sender, EventArgs e)
         {
 
+
         }
+
+
 
         private void mouse_Down(object sender, MouseEventArgs e)
         {
@@ -70,6 +73,13 @@ namespace Together_Culture
             MemData memData = new MemData();
             memData.Show();
             this.Hide();
+        }
+
+        private void quit_clicked(object sender, EventArgs e)
+        {
+            Loginpage login_new = new Loginpage();
+            login_new.Show();
+            this.Close();
         }
     }
 }

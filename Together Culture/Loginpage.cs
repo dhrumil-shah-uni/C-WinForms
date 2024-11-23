@@ -24,7 +24,7 @@ namespace Together_Culture
 
             panel2.BorderStyle = BorderStyle.None;
             panel2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, 20, 20));
-            
+
         }
 
         private Point mouseLocation;
@@ -118,8 +118,13 @@ namespace Together_Culture
             if (e.KeyChar == (char)Keys.Enter)
             {
                 passbox.Select();
-                e.Handled= true;
+                e.Handled = true;
             }
+        }
+
+        private void exit_clicked(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

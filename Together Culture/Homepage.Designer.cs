@@ -32,13 +32,17 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             title = new Label();
             panel1 = new Panel();
+            button1 = new Button();
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
+            navbar = new Panel();
+            navlist = new ListBox();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            navbar.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -48,6 +52,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 85F));
             tableLayoutPanel1.Controls.Add(title, 0, 0);
             tableLayoutPanel1.Controls.Add(panel1, 1, 0);
+            tableLayoutPanel1.Controls.Add(navbar, 0, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Margin = new Padding(8);
@@ -76,12 +81,28 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(186, 8);
             panel1.Name = "panel1";
             panel1.Size = new Size(1006, 105);
             panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            button1.AutoSize = true;
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Verdana", 12F);
+            button1.ForeColor = Color.FromArgb(249, 249, 249);
+            button1.Location = new Point(891, 34);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 37);
+            button1.TabIndex = 1;
+            button1.Text = "Logout";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += quit_clicked;
             // 
             // panel2
             // 
@@ -122,6 +143,31 @@
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
+            // navbar
+            // 
+            navbar.BackColor = Color.Transparent;
+            navbar.Controls.Add(navlist);
+            navbar.Dock = DockStyle.Fill;
+            navbar.Location = new Point(8, 119);
+            navbar.Name = "navbar";
+            navbar.Size = new Size(172, 623);
+            navbar.TabIndex = 2;
+            // 
+            // navlist
+            // 
+            navlist.BackColor = Color.FromArgb(23, 23, 23);
+            navlist.BorderStyle = BorderStyle.None;
+            navlist.Dock = DockStyle.Top;
+            navlist.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            navlist.ForeColor = Color.FromArgb(253, 253, 253);
+            navlist.FormattingEnabled = true;
+            navlist.ItemHeight = 25;
+            navlist.Items.AddRange(new object[] { "Home", "Events", "Membership", "About", "Admin" });
+            navlist.Location = new Point(0, 0);
+            navlist.Name = "navlist";
+            navlist.Size = new Size(172, 600);
+            navlist.TabIndex = 0;
+            // 
             // Homepage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -138,9 +184,11 @@
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            navbar.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -152,5 +200,8 @@
         private Panel panel2;
         private PictureBox pictureBox1;
         private TextBox textBox1;
+        private Panel navbar;
+        private ListBox navlist;
+        private Button button1;
     }
 }

@@ -40,9 +40,12 @@
             button1 = new Button();
             linkLabel1 = new LinkLabel();
             passbox = new TextBox();
+            panel3 = new Panel();
+            button2 = new Button();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -53,6 +56,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Controls.Add(panel1, 1, 0);
+            tableLayoutPanel1.Controls.Add(panel3, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(10, 10);
             tableLayoutPanel1.Margin = new Padding(10);
@@ -205,6 +209,32 @@
             passbox.UseSystemPasswordChar = true;
             passbox.KeyPress += enter_pressed;
             // 
+            // panel3
+            // 
+            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
+            panel3.BackgroundImageLayout = ImageLayout.Zoom;
+            panel3.Controls.Add(button2);
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(3, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(584, 724);
+            panel3.TabIndex = 1;
+            // 
+            // button2
+            // 
+            button2.AutoSize = true;
+            button2.BackgroundImageLayout = ImageLayout.None;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Verdana", 12F);
+            button2.ForeColor = Color.FromArgb(23, 23, 23);
+            button2.Location = new Point(3, 684);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 37);
+            button2.TabIndex = 2;
+            button2.Text = "Exit";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += exit_clicked;
+            // 
             // Loginpage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -225,6 +255,8 @@
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -241,5 +273,7 @@
         private Label label1;
         private Label errorlabel;
         private LinkLabel linkLabel2;
+        private Button button2;
+        private Panel panel3;
     }
 }
