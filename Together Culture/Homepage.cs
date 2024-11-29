@@ -114,6 +114,9 @@ namespace Together_Culture
                     blogs1.Visible = true;
                     break;
                 case 5:
+                    MemData memdatas = new MemData();
+                    memdatas.Show();
+                    break;
                 default:
                     break;
             }
