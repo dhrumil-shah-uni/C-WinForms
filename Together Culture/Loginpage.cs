@@ -28,6 +28,7 @@ namespace Together_Culture
         }
 
         private Point mouseLocation;
+        bool isAdmin=false;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -76,17 +77,26 @@ namespace Together_Culture
                 refresh_globals.global_var();
                 SqlConnection conn = new SqlConnection(refresh_globals.Conn_string);
                 conn.Open();
-                String querytext = "SELECT * FROM Login WHERE email=@email AND pass=@pass";
+                String querytext = "SELECT COUNT(*) FROM Members WHERE Email=@email AND Password=@pass";
                 SqlCommand sqlcmd = new SqlCommand(querytext, conn);
                 sqlcmd.Parameters.AddWithValue("@email", emailbox.Text);
                 sqlcmd.Parameters.AddWithValue("@pass", passbox.Text);
 
-                String checker = (string)sqlcmd.ExecuteScalar();
+                int checker = (int)sqlcmd.ExecuteScalar();
 
-                if (checker != null)
+                
+                if (checker != 0)
                 {
+                    String checkadmin_query = "SELECT Designation FROM Members WHERE Email=@email";
+                    SqlCommand admincheck = new SqlCommand(checkadmin_query, conn);
+                    admincheck.Parameters.AddWithValue("@email", emailbox.Text);
+                    String checkAdmin = (string)admincheck.ExecuteScalar();
+                    if (checkAdmin == "Admin")
+                    {
+                        isAdmin = true;
+                    }
                     errorlabel.Text = "Login Successful";
-                    Homepage Home = new Homepage();
+                    Homepage Home = new Homepage(isAdmin);
                     Home.Show();
                     this.Close();
                 }

@@ -13,7 +13,7 @@ namespace Together_Culture
 {
     public partial class Homepage : Form
     {
-        public Homepage()
+        public Homepage(bool isAdmin)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
@@ -23,6 +23,12 @@ namespace Together_Culture
             panel2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, 20, 20));
 
             this.Select();
+
+            if (!isAdmin)
+            {
+                navlist.Items.Remove("Admin");
+            }
+            
         }
 
         private Point mouseLocation;
