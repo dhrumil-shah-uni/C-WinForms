@@ -67,31 +67,44 @@ namespace Together_Culture
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e, string text)
         {
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"Z:\\C# WinForms\\Together Culture\\Together Culture\\Databases\\logindb.mdf\";Integrated Security=True;Connect Timeout=30");
-            conn.Open();
-            String querytext = "SELECT * FROM Login WHERE email=@email AND pass=@pass";
-            SqlCommand sqlcmd = new SqlCommand(querytext, conn);
-            sqlcmd.Parameters.AddWithValue("@email", emailbox.Text);
-            sqlcmd.Parameters.AddWithValue("@pass", passbox.Text);
-
-            String checker = (string)sqlcmd.ExecuteScalar();
-
-            if (checker != null)
+            
+            try
             {
-                errorlabel.Text = "Login Successful";
-                Homepage Home = new Homepage();
-                Home.Show();
-                this.Close();
+                Globals refresh_globals = new Globals();
+                refresh_globals.global_var();
+                SqlConnection conn = new SqlConnection(refresh_globals.Conn_string);
+                conn.Open();
+                String querytext = "SELECT * FROM Login WHERE email=@email AND pass=@pass";
+                SqlCommand sqlcmd = new SqlCommand(querytext, conn);
+                sqlcmd.Parameters.AddWithValue("@email", emailbox.Text);
+                sqlcmd.Parameters.AddWithValue("@pass", passbox.Text);
+
+                String checker = (string)sqlcmd.ExecuteScalar();
+
+                if (checker != null)
+                {
+                    errorlabel.Text = "Login Successful";
+                    Homepage Home = new Homepage();
+                    Home.Show();
+                    this.Close();
+                }
+                else
+                {
+                    errorlabel.Text = "Invalid Login";
+                }
+
+
+                conn.Close();
             }
-            else
+            catch (Exception)
             {
-                errorlabel.Text = "Invalid Login";
+                
+                throw;
             }
-
-
-            conn.Close();
+            
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -108,7 +121,7 @@ namespace Together_Culture
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                button1_Click(sender, e);
+                button1_Click(sender, e, "Database Error");
                 e.Handled = true;
             }
         }
