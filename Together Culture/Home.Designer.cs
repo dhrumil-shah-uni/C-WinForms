@@ -679,6 +679,7 @@
             button3.TabIndex = 5;
             button3.Text = "more...";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // pictureBox18
             // 

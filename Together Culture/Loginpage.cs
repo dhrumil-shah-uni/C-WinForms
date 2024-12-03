@@ -16,6 +16,7 @@ namespace Together_Culture
 {
     public partial class Loginpage : Form
     {
+        
         public Loginpage()
         {
             InitializeComponent();
@@ -110,7 +111,9 @@ namespace Together_Culture
             }
             catch (Exception)
             {
-                
+                MessageBox.Show("Database Error", "Database Failure, Please check if database exists", MessageBoxButtons.OK);
+
+
                 throw;
             }
             

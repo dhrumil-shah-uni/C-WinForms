@@ -13,6 +13,11 @@ namespace Together_Culture
 {
     public partial class Homepage : Form
     {
+        public ListBox Navlist
+        {
+            get { return navlist; }
+        }
+        
         public Homepage(bool isAdmin)
         {
             InitializeComponent();
@@ -28,6 +33,8 @@ namespace Together_Culture
             {
                 navlist.Items.Remove("Admin");
             }
+
+            
             
         }
 

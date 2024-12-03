@@ -15,6 +15,7 @@ namespace Together_Culture
         public Home()
         {
             InitializeComponent();
+                        
         }
 
         private void MainHomePanel_Paint(object sender, PaintEventArgs e)
@@ -34,7 +35,7 @@ namespace Together_Culture
 
         private void fgfgj(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -80,6 +81,21 @@ namespace Together_Culture
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Homepage pForm = this.FindForm() as Homepage;
+
+            if (pForm != null)
+            {
+                pForm.Navlist.SelectedIndex = 1;
+            }
+            else
+            {
+                MessageBox.Show("Parent form is not Homepage");
+            }
 
         }
     }

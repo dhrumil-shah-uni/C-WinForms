@@ -416,6 +416,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Crimson;
             Controls.Add(flowLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Events";

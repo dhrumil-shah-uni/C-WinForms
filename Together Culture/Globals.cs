@@ -12,6 +12,7 @@ namespace Together_Culture
         public String current_dir;
         public String db_source;
         public String Conn_string;
+        
         public void global_var()
         {
             

@@ -22,6 +22,8 @@
 
         #region Windows Form Designer generated code
 
+
+
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -221,6 +223,7 @@
             // 
             // events1
             // 
+            events1.BackColor = Color.Crimson;
             events1.Location = new Point(49, 4);
             events1.Margin = new Padding(3, 4, 3, 4);
             events1.Name = "events1";
@@ -264,7 +267,6 @@
         #endregion
 
         private Panel navbar;
-        private ListBox navlist;
         private Panel panel1;
         private Button button1;
         private Panel panel2;
@@ -278,5 +280,6 @@
         private MembershipPage membershipPage1;
         private Shop shop1;
         private Blogs blogs1;
+        private ListBox navlist;
     }
 }
