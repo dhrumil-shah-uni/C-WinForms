@@ -48,5 +48,11 @@ namespace Together_Culture
             EventManager eventManager = new EventManager();
             eventManager.Show();
         }
+
+        private void announce(object sender, EventArgs e)
+        {
+            Announce announce = new Announce();
+            announce.Show();
+        }
     }
 }
