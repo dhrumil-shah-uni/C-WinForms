@@ -54,5 +54,11 @@ namespace Together_Culture
             Announce announce = new Announce();
             announce.Show();
         }
+
+        private void shop_manage(object sender, EventArgs e)
+        {
+            ShopManager shopManager = new ShopManager();
+            shopManager.Show();
+        }
     }
 }

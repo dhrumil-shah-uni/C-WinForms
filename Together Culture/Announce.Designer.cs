@@ -149,6 +149,7 @@
             BackColor = Color.FromArgb(23, 23, 23);
             ClientSize = new Size(800, 450);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Announce";
             Text = "Announce";
             tableLayoutPanel1.ResumeLayout(false);

@@ -129,6 +129,7 @@
             button3.TabIndex = 2;
             button3.Text = "Manage Shop";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += shop_manage;
             // 
             // button2
             // 
