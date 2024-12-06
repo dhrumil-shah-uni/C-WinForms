@@ -39,33 +39,26 @@ namespace Together_Culture
                 titletime.Stop();
             };
             titletime.Start();
-
         }
 
         private void mouse_Down(object sender, MouseEventArgs e)
         {
             mouseLocation = new Point(-e.X, -e.Y);
-
         }
-
-
 
         private async void mouse_Move(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-
                 Point mousePose = Control.MousePosition;
 
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePose;
             }
-
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }

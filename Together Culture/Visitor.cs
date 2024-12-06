@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Together_Culture
+﻿namespace Together_Culture
 {
     public partial class Visitor : UserControl
     {
@@ -19,12 +9,10 @@ namespace Together_Culture
 
         private void label12_Click(object sender, EventArgs e)
         {
-
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,15 +21,13 @@ namespace Together_Culture
 
             if (form != null)
             {
-                MessageBox.Show("Registered Successfully. Please wait for confirmation email","Success",MessageBoxButtons.OK);
+                MessageBox.Show("Registered Successfully. Please wait for confirmation email", "Success", MessageBoxButtons.OK);
                 form.Close();
-                
             }
             else
             {
                 MessageBox.Show("Parent form is not VisitorForm");
             }
-
         }
     }
 }

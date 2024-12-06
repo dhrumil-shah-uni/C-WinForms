@@ -1,22 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Microsoft.Data.SqlClient;
 using System.Runtime.InteropServices;
-using Timer = System.Windows.Forms.Timer;
-using Microsoft.Data.SqlClient;
-
 
 namespace Together_Culture
 {
     public partial class Loginpage : Form
     {
-        
         public Loginpage()
         {
             InitializeComponent();
@@ -25,11 +13,10 @@ namespace Together_Culture
 
             panel2.BorderStyle = BorderStyle.None;
             panel2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, 20, 20));
-
         }
 
         private Point mouseLocation;
-        bool isAdmin=false;
+        private bool isAdmin = false;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -51,7 +38,6 @@ namespace Together_Culture
         {
             if (e.Button == MouseButtons.Left)
             {
-
                 Point mousePose = Control.MousePosition;
 
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
@@ -66,12 +52,10 @@ namespace Together_Culture
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e, string text)
         {
-            
             try
             {
                 Globals refresh_globals = new Globals();
@@ -85,7 +69,6 @@ namespace Together_Culture
 
                 int checker = (int)sqlcmd.ExecuteScalar();
 
-                
                 if (checker != 0)
                 {
                     String checkadmin_query = "SELECT Designation FROM Members WHERE Email=@email";
@@ -106,23 +89,18 @@ namespace Together_Culture
                     errorlabel.Text = "Invalid Login";
                 }
 
-
                 conn.Close();
             }
             catch (Exception)
             {
                 MessageBox.Show("Database Error", "Database Failure, Please check if database exists", MessageBoxButtons.OK);
 
-
                 throw;
             }
-            
-            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
