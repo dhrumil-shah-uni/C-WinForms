@@ -77,6 +77,7 @@ namespace Together_Culture
             events1.Visible = false;
             membershipPage1.Visible = false;
             blogs1.Visible = false;
+            admin1.Visible = false;
 
             switch (navlist.SelectedIndex)
             {
@@ -106,7 +107,8 @@ namespace Together_Culture
                     break;
 
                 case 5:
-
+                    admin1.Dock = DockStyle.Fill;
+                    admin1.Visible = true;
                     break;
 
                 default:
@@ -143,7 +145,7 @@ namespace Together_Culture
                         break;
 
                     case "admin":
-                        navlist.SelectedIndex = 5;
+                        if (navlist.Items.Count > 5) { navlist.SelectedIndex = 5; } else { MessageBox.Show("Invalid input."); }
                         break;
 
                     default:

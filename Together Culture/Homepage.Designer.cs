@@ -46,6 +46,7 @@
             membershipPage1 = new MembershipPage();
             events1 = new Events();
             home1 = new Home();
+            admin1 = new Admin();
             navbar.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -144,7 +145,6 @@
             textBox1.PlaceholderText = "Search";
             textBox1.Size = new Size(174, 25);
             textBox1.TabIndex = 0;
-            
             textBox1.KeyDown += on_Enter_press;
             // 
             // title
@@ -184,6 +184,7 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(admin1);
             panel3.Controls.Add(blogs1);
             panel3.Controls.Add(shop1);
             panel3.Controls.Add(membershipPage1);
@@ -244,6 +245,14 @@
             home1.TabIndex = 0;
             home1.Visible = false;
             // 
+            // admin1
+            // 
+            admin1.BackColor = Color.FromArgb(23, 23, 23);
+            admin1.Location = new Point(261, 4);
+            admin1.Name = "admin1";
+            admin1.Size = new Size(40, 40);
+            admin1.TabIndex = 5;
+            // 
             // Homepage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -286,5 +295,6 @@
         private Shop shop1;
         private Blogs blogs1;
         private ListBox navlist;
+        private Admin admin1;
     }
 }
