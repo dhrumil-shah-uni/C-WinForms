@@ -49,6 +49,5 @@ namespace Together_Culture
                 MessageBox.Show("Failed to add the announcement.", "Error", MessageBoxButtons.OK);
             }
         }
-
     }
 }

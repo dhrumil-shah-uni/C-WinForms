@@ -29,14 +29,15 @@ namespace Together_Culture
 
             string query1 = "INSERT INTO Tags ([Tag_Name]) VALUES (@Tag_Name)";
             SqlCommand sqlcmd = new SqlCommand(query1, sqlConnection);
-            sqlcmd.Parameters.AddWithValue("@Taf_Name",textBox1.Text);
+            sqlcmd.Parameters.AddWithValue("@Taf_Name", textBox1.Text);
 
             int rowsAffected = sqlcmd.ExecuteNonQuery();
 
             if (rowsAffected > 0)
             {
                 MessageBox.Show("Tag Created Successfully");
-            } else
+            }
+            else
             {
                 MessageBox.Show("Failed to add Tag");
             }

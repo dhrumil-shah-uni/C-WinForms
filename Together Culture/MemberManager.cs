@@ -1,13 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Together_Culture
 {
@@ -58,15 +50,12 @@ namespace Together_Culture
             textBox3.AutoCompleteCustomSource.AddRange(MemList.ToArray());
             textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
             textBox1.AutoCompleteCustomSource.AddRange(MemList.ToArray());
-
-
         }
 
         private void new_mem_click(object sender, EventArgs e)
         {
             VisitorForm visitorForm = new VisitorForm();
             visitorForm.ShowDialog();
-
         }
 
         private void new_tag_clicked(object sender, EventArgs e)
@@ -316,8 +305,6 @@ namespace Together_Culture
 
                 e.Handled = true;
             }
-
         }
-
     }
 }
