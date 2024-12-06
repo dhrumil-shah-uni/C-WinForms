@@ -15,6 +15,32 @@ namespace Together_Culture
         public Admin()
         {
             InitializeComponent();
+            this.Select();
+        }
+
+        private void exit_clicked(object sender, EventArgs e)
+        {
+            Homepage? pForm = this.FindForm() as Homepage;
+
+            if (pForm != null)
+            {
+                pForm.Navlist.SelectedIndex = 0;
+            }
+            else
+            {
+                MessageBox.Show("Parent form is not Homepage");
+            }
+        }
+
+        private void ver_info_click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Together Culture\nVersion 1.0 \n\nCreated by: Dhrumil, Jose, Ali, Dhruv, Gagan\nFor Software Engineering Assignment");
+        }
+
+        private void mem_click(object sender, EventArgs e)
+        {
+            MemberManager memberManager = new MemberManager();
+            memberManager.Show();
         }
     }
 }

@@ -74,6 +74,7 @@
             button9.TabIndex = 8;
             button9.Text = "Exit";
             button9.UseVisualStyleBackColor = true;
+            button9.Click += exit_clicked;
             // 
             // button8
             // 
@@ -87,6 +88,7 @@
             button8.TabIndex = 7;
             button8.Text = "Ver Info.";
             button8.UseVisualStyleBackColor = true;
+            button8.Click += ver_info_click;
             // 
             // button7
             // 
@@ -152,6 +154,7 @@
             button1.TabIndex = 0;
             button1.Text = "Manage Members";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += mem_click;
             // 
             // Admin
             // 

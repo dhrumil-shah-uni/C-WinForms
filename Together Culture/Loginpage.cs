@@ -67,7 +67,7 @@ namespace Together_Culture
 
                 if (checker != 0)
                 {
-                    String checkadmin_query = "SELECT Designation FROM Members WHERE Email=@email";
+                    String checkadmin_query = "SELECT MembershipType FROM Members WHERE Email=@email";
                     SqlCommand admincheck = new SqlCommand(checkadmin_query, conn);
                     admincheck.Parameters.AddWithValue("@email", emailbox.Text);
                     String checkAdmin = (string)admincheck.ExecuteScalar();
