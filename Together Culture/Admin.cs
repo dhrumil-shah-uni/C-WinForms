@@ -42,5 +42,11 @@ namespace Together_Culture
             MemberManager memberManager = new MemberManager();
             memberManager.Show();
         }
+
+        private void manage_events_click(object sender, EventArgs e)
+        {
+            EventManager eventManager = new EventManager();
+            eventManager.Show();
+        }
     }
 }
