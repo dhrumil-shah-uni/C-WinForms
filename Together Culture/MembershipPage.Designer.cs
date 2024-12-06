@@ -124,7 +124,7 @@
             flowLayoutPanel3.Name = "flowLayoutPanel3";
             flowLayoutPanel3.Size = new Size(725, 52);
             flowLayoutPanel3.TabIndex = 7;
-            flowLayoutPanel3.Paint += flowLayoutPanel3_Paint;
+            
             // 
             // button1
             // 
@@ -163,7 +163,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(739, 1788);
             panel2.TabIndex = 1;
-            panel2.Paint += panel2_Paint;
+            
             // 
             // label10
             // 
@@ -201,7 +201,7 @@
             label9.Size = new Size(286, 24);
             label9.TabIndex = 10;
             label9.Text = "£ 90 / month + £120 joining fee";
-            label9.Click += label9_Click;
+            
             // 
             // label8
             // 
@@ -213,7 +213,7 @@
             label8.Size = new Size(224, 27);
             label8.TabIndex = 9;
             label8.Text = "Key Access Members";
-            label8.Click += label8_Click;
+            
             // 
             // panel4
             // 
@@ -257,7 +257,7 @@
             label4.Size = new Size(258, 27);
             label4.TabIndex = 4;
             label4.Text = "Workspace Membership";
-            label4.Click += label4_Click;
+            
             // 
             // label3
             // 
@@ -317,7 +317,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(352, 408);
             panel3.TabIndex = 0;
-            panel3.Paint += panel3_Paint;
+            
             // 
             // contextMenuStrip1
             // 

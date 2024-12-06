@@ -63,14 +63,6 @@ namespace Together_Culture
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
-
         private void quit_clicked(object sender, EventArgs e)
         {
             Loginpage login_new = new Loginpage();
@@ -126,7 +118,7 @@ namespace Together_Culture
         {
             if (e.KeyCode == Keys.Enter)
             {
-                //Search;
+                //Search
 
                 switch (textBox1.Text.Trim().ToLower())
                 {

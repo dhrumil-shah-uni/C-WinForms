@@ -248,7 +248,7 @@
             flowLayoutPanel5.Name = "flowLayoutPanel5";
             flowLayoutPanel5.Size = new Size(163, 306);
             flowLayoutPanel5.TabIndex = 9;
-            flowLayoutPanel5.Paint += flowLayoutPanel5_Paint;
+            
             // 
             // pictureBox2
             // 
@@ -280,7 +280,7 @@
             pictureBox3.Size = new Size(160, 250);
             pictureBox3.TabIndex = 7;
             pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click;
+            
             // 
             // flowLayoutPanel11
             // 
@@ -642,7 +642,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Shop";
             Size = new Size(740, 640);
-            Load += Shop_Load;
+            
             flowLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

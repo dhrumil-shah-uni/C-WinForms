@@ -113,7 +113,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(247, 27);
             dateTimePicker1.TabIndex = 14;
-            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            
             // 
             // panel6
             // 
@@ -215,7 +215,7 @@
             label12.Size = new Size(92, 22);
             label12.TabIndex = 1;
             label12.Text = "First Name";
-            label12.Click += label12_Click;
+            
             // 
             // label1
             // 

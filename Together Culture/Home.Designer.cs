@@ -176,7 +176,7 @@
             MainHomePanel.Padding = new Padding(5);
             MainHomePanel.Size = new Size(750, 522);
             MainHomePanel.TabIndex = 0;
-            MainHomePanel.Paint += MainHomePanel_Paint;
+            
             // 
             // panel13
             // 
@@ -371,7 +371,7 @@
             panel10.Name = "panel10";
             panel10.Size = new Size(232, 40);
             panel10.TabIndex = 3;
-            panel10.Paint += panel10_Paint;
+           
             // 
             // label11
             // 
@@ -648,7 +648,7 @@
             panel7.Name = "panel7";
             panel7.Size = new Size(765, 40);
             panel7.TabIndex = 12;
-            panel7.Paint += panel7_Paint;
+            
             // 
             // label10
             // 
@@ -747,7 +747,7 @@
             listView1.TabIndex = 1;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Tile;
-            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged_1;
+            
             // 
             // columnHeader1
             // 
@@ -884,7 +884,7 @@
             slogen.TabIndex = 2;
             slogen.Text = "Togrther we can buid a more inclusive and ecological economy in Cambridge";
             slogen.TextAlign = ContentAlignment.TopCenter;
-            slogen.Click += slogen_Click;
+            
             // 
             // label3
             // 
@@ -897,7 +897,7 @@
             label3.Size = new Size(338, 27);
             label3.TabIndex = 1;
             label3.Text = "To Together Culture Community";
-            label3.Click += label3_Click;
+            
             // 
             // welcome
             // 
@@ -911,7 +911,7 @@
             welcome.TabIndex = 0;
             welcome.Text = "Welcome";
             welcome.TextAlign = ContentAlignment.TopCenter;
-            welcome.Click += welcome_Click;
+            
             // 
             // label1
             // 
@@ -924,7 +924,7 @@
             label1.Size = new Size(185, 28);
             label1.TabIndex = 0;
             label1.Text = " DASHBOARD";
-            label1.Click += label1_Click;
+            
             // 
             // Home
             // 

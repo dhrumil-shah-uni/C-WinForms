@@ -2,10 +2,6 @@
 {
     public partial class Event_Info : Form
     {
-        //private String event_name;
-        //private String event_desc;
-        //private String event_info;
-
         public Event_Info(String event_name, String event_desc, String event_info)
         {
             InitializeComponent();

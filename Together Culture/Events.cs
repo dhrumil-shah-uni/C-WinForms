@@ -7,25 +7,9 @@
             InitializeComponent();
         }
 
-        private void eventLog2_EntryWritten(object sender, System.Diagnostics.EntryWrittenEventArgs e)
-        {
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-        }
-
         private void event1_click(object sender, EventArgs e)
         {
-            String event_name = null, event_desc = null, event_info = null;
+            String event_name = "null", event_desc = "null", event_info = "null";
             switch ((sender as Panel)?.Name)
             {
                 case "panel4":

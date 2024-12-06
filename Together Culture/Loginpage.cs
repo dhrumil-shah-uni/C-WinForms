@@ -50,11 +50,7 @@ namespace Together_Culture
             mouseLocation = new Point(-e.X, -e.Y);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void button1_Click(object sender, EventArgs e, string text)
+        private void button1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -99,10 +95,6 @@ namespace Together_Culture
             }
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             errorlabel.Text = "Email Sent";
@@ -112,7 +104,7 @@ namespace Together_Culture
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                button1_Click(sender, e, "Database Error");
+                button1_Click(sender, e);
                 e.Handled = true;
             }
         }

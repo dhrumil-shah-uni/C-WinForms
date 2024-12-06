@@ -168,7 +168,7 @@
             label13.Size = new Size(197, 19);
             label13.TabIndex = 14;
             label13.Text = "23 December, 8pm - 11pm";
-            label13.Click += label13_Click;
+            
             // 
             // label14
             // 
@@ -339,7 +339,7 @@
             label6.Size = new Size(205, 19);
             label6.TabIndex = 14;
             label6.Text = "13 December, 10am - 12pm";
-            label6.Click += label6_Click;
+            
             // 
             // label5
             // 

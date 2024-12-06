@@ -46,7 +46,10 @@ namespace Together_Culture
             mouseLocation = new Point(-e.X, -e.Y);
         }
 
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+
         private async void mouse_Move(object sender, MouseEventArgs e)
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -55,10 +58,6 @@ namespace Together_Culture
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePose;
             }
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
         }
     }
 }
