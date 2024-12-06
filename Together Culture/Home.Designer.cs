@@ -200,6 +200,7 @@
             button2.TabIndex = 4;
             button2.Text = "more...";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += blogs_button_click;
             // 
             // label18
             // 
@@ -658,6 +659,7 @@
             label10.Size = new Size(84, 28);
             label10.TabIndex = 0;
             label10.Text = "SHOP";
+            label10.Click += on_shop_click;
             // 
             // panel5
             // 

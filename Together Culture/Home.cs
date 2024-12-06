@@ -15,7 +15,7 @@ namespace Together_Culture
         public Home()
         {
             InitializeComponent();
-                        
+
         }
 
         private void MainHomePanel_Paint(object sender, PaintEventArgs e)
@@ -62,6 +62,8 @@ namespace Together_Culture
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+            MessageBox.Show("Thanks for signing up for our e-newsletter. \nWelcome to Together Culture.");
+
         }
 
         private void welcome_Click(object sender, EventArgs e)
@@ -97,6 +99,39 @@ namespace Together_Culture
                 MessageBox.Show("Parent form is not Homepage");
             }
 
+        }
+
+        private void blogs_button_click(object sender, EventArgs e)
+        {
+            Homepage pForm = this.FindForm() as Homepage;
+
+            if (pForm != null)
+            {
+                pForm.Navlist.SelectedIndex = 4;
+            }
+            else
+            {
+                MessageBox.Show("Parent form is not Homepage");
+            }
+        }
+
+        private void on_shop_click(object sender, EventArgs e)
+        {
+            Homepage pForm = this.FindForm() as Homepage;
+
+            if (pForm != null)
+            {
+                pForm.Navlist.SelectedIndex = 3;
+            }
+            else
+            {
+                MessageBox.Show("Parent form is not Homepage");
+            }
+        }
+
+        private void on_shop(object sender, EventArgs e)
+        {
+            
         }
     }
 }

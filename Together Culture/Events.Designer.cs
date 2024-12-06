@@ -285,6 +285,7 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(239, 250);
             panel6.TabIndex = 11;
+            panel6.Click += event1_click;
             // 
             // label8
             // 
@@ -327,6 +328,7 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(235, 250);
             panel5.TabIndex = 1;
+            panel5.Click += event1_click;
             // 
             // label6
             // 
@@ -353,11 +355,10 @@
             // 
             flowLayoutPanel3.BackgroundImage = (Image)resources.GetObject("flowLayoutPanel3.BackgroundImage");
             flowLayoutPanel3.BackgroundImageLayout = ImageLayout.Stretch;
-            flowLayoutPanel3.Dock = DockStyle.Fill;
             flowLayoutPanel3.Location = new Point(0, 0);
             flowLayoutPanel3.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(235, 250);
+            flowLayoutPanel3.Size = new Size(235, 177);
             flowLayoutPanel3.TabIndex = 12;
             // 
             // panel4
@@ -371,6 +372,7 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(239, 250);
             panel4.TabIndex = 0;
+            panel4.Click += event1_click;
             // 
             // label4
             // 

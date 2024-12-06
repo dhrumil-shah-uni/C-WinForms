@@ -139,7 +139,7 @@
             button1.TabIndex = 3;
             button1.Text = "Join Community";
             button1.UseVisualStyleBackColor = false;
-            button1.UseWaitCursor = true;
+            button1.Click += join_click;
             // 
             // panel2
             // 
@@ -329,6 +329,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Crimson;
             Controls.Add(flowLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "MembershipPage";

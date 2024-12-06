@@ -61,5 +61,10 @@ namespace Together_Culture
         {
 
         }
+
+        private void join_click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thanks for showing interest in our community. \n\nAn e-mail has been sent on your registered e-mail address. \n\nPlease follow the next steps as mentioned.", "Success", MessageBoxButtons.OK);
+        }
     }
 }

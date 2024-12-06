@@ -53,7 +53,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Red;
+            panel1.BackColor = Color.FromArgb(20, 20, 20);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Fill;
@@ -139,7 +139,7 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.BackColor = Color.Red;
+            richTextBox1.BackColor = Color.FromArgb(20, 20, 20);
             richTextBox1.BorderStyle = BorderStyle.FixedSingle;
             richTextBox1.Font = new Font("Microsoft Sans Serif", 10F);
             richTextBox1.ForeColor = Color.Brown;
@@ -221,6 +221,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft YaHei UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Coral;
             label1.Location = new Point(64, 48);
             label1.Name = "label1";
             label1.Size = new Size(130, 31);

@@ -134,6 +134,8 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.AutoCompleteCustomSource.AddRange(new string[] { "Home", "Events", "Membership", "Shop", "Blogs", "Admin" });
+            textBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             textBox1.BackColor = Color.FromArgb(253, 253, 253);
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -143,6 +145,7 @@
             textBox1.Size = new Size(174, 25);
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;
+            textBox1.KeyDown += on_Enter_press;
             // 
             // title
             // 
@@ -204,6 +207,7 @@
             // 
             // shop1
             // 
+            shop1.BackColor = Color.Crimson;
             shop1.Location = new Point(141, 4);
             shop1.Margin = new Padding(3, 4, 3, 4);
             shop1.Name = "shop1";
@@ -213,6 +217,7 @@
             // 
             // membershipPage1
             // 
+            membershipPage1.BackColor = Color.Crimson;
             membershipPage1.Location = new Point(95, 4);
             membershipPage1.Margin = new Padding(3, 4, 3, 4);
             membershipPage1.Name = "membershipPage1";
