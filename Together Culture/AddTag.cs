@@ -29,7 +29,7 @@ namespace Together_Culture
 
             string query1 = "INSERT INTO Tags ([Tag_Name]) VALUES (@Tag_Name)";
             SqlCommand sqlcmd = new SqlCommand(query1, sqlConnection);
-            sqlcmd.Parameters.AddWithValue("@Taf_Name", textBox1.Text);
+            sqlcmd.Parameters.AddWithValue("@Tag_Name", textBox1.Text);
 
             int rowsAffected = sqlcmd.ExecuteNonQuery();
 
