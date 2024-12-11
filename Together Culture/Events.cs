@@ -17,6 +17,9 @@
 
         private void event1_click(object sender, EventArgs e)
         {
+
+            //Dummy data
+            //Can also be implemented to use database
             String event_name = "null", event_desc = "null", event_info = "null";
             switch ((sender as Panel)?.Name)
             {
@@ -42,6 +45,7 @@
                     break;
             }
 
+            //Shows more information when clicked on an event, according to the data, in a new form
             Event_Info event_Info = new Event_Info(event_name, event_desc, event_info);
             event_Info.Show();
         }

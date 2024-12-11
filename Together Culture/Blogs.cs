@@ -4,6 +4,8 @@
     {
         public Blogs()
         {
+            //Demo page
+            //Database can easily be implemented to show dynamic data
             InitializeComponent();
         }
     }

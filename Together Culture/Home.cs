@@ -9,15 +9,19 @@
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            //Shows feedback for signing up
+            //can be expanded to send a request or add to database
             MessageBox.Show("Thanks for signing up for our e-newsletter. \nWelcome to Together Culture.");
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //Finds the parent form, as its implemented as a user control
             Homepage? pForm = this.FindForm() as Homepage;
 
             if (pForm != null)
             {
+                //sets to Events page
                 pForm.Navlist.SelectedIndex = 1;
             }
             else
@@ -32,6 +36,7 @@
 
             if (pForm != null)
             {
+                //Sets to Blogs page
                 pForm.Navlist.SelectedIndex = 4;
             }
             else
@@ -46,6 +51,7 @@
 
             if (pForm != null)
             {
+                //Sets to shop page
                 pForm.Navlist.SelectedIndex = 3;
             }
             else

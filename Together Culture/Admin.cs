@@ -60,10 +60,12 @@ namespace Together_Culture
 
         private void exit_clicked(object sender, EventArgs e)
         {
+            //handles exit, finds parent form as this is implemented as a User Control
             Homepage? pForm = this.FindForm() as Homepage;
 
             if (pForm != null)
             {
+                //goes to default home page
                 pForm.Navlist.SelectedIndex = 0;
             }
             else
@@ -74,29 +76,35 @@ namespace Together_Culture
 
         private void ver_info_click(object sender, EventArgs e)
         {
+            //Shows demo info
             MessageBox.Show("Together Culture\nVersion 1.0 \n\nCreated by: Dhrumil, Jose, Ali, Dhruv, Gagan\nFor Software Engineering Assignment");
         }
 
         private void mem_click(object sender, EventArgs e)
         {
+            //Open form to manage members and tags
             MemberManager memberManager = new MemberManager();
             memberManager.Show();
         }
 
         private void manage_events_click(object sender, EventArgs e)
         {
+            //opens form to manage events
             EventManager eventManager = new EventManager();
             eventManager.Show();
         }
 
         private void announce(object sender, EventArgs e)
         {
+
+            //opens form to make new announcements
             Announce announce = new Announce();
             announce.Show();
         }
 
         private void shop_manage(object sender, EventArgs e)
         {
+            //opens form to manage digital shop items
             ShopManager shopManager = new ShopManager();
             shopManager.Show();
         }

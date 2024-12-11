@@ -10,15 +10,18 @@ namespace Together_Culture
             InitializeComponent();
             this.Select();
 
+            //Refresh connection string, new SQL Connection
             Globals refresh_globals = new Globals();
             refresh_globals.global_var();
 
             SqlConnection sqlConnection = new SqlConnection(refresh_globals.Conn_string);
             sqlConnection.Open();
 
+            //List to use as auto-complete source for the textbox
             List<String> TagList = new List<String>();
             List<String> MemList = new List<String>();
 
+            //queries to add items to the lists
             string query1 = "SELECT Tag_Name FROM Tags";
             string query2 = "SELECT (First_Name+' '+Last_Name) AS Full_Name FROM Members";
 
@@ -28,19 +31,20 @@ namespace Together_Culture
             SqlDataReader reader = sqlcmd1.ExecuteReader();
             while (reader.Read())
             {
-                TagList.Add(reader["Tag_Name"].ToString());
+                TagList.Add(reader["Tag_Name"].ToString()); //Execute query
             }
             reader.Close();
 
             SqlDataReader reader2 = sqlcmd2.ExecuteReader();
             while (reader2.Read())
             {
-                MemList.Add(reader2["Full_Name"].ToString());
+                MemList.Add(reader2["Full_Name"].ToString()); //Execute query
             }
             reader2.Close();
 
             sqlConnection.Close();
 
+            //Update auto-complete sources
             textBox2.AutoCompleteSource = AutoCompleteSource.CustomSource;
             textBox2.AutoCompleteCustomSource.AddRange(TagList.ToArray());
             textBox4.AutoCompleteSource = AutoCompleteSource.CustomSource;
@@ -54,12 +58,14 @@ namespace Together_Culture
 
         private void new_mem_click(object sender, EventArgs e)
         {
+            //shows form to add information for a new member
             VisitorForm visitorForm = new VisitorForm();
             visitorForm.ShowDialog();
         }
 
         private void new_tag_clicked(object sender, EventArgs e)
         {
+            //shows form to add new tags
             AddTag addTag = new AddTag();
             addTag.Show();
             this.Close();
@@ -67,26 +73,27 @@ namespace Together_Culture
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //Refresh connection string, start new SQL Connection
             Globals refresh_globals = new Globals();
             refresh_globals.global_var();
 
-            // Open SQL connection
+            //Open SQL connection
             SqlConnection sqlConnection = new SqlConnection(refresh_globals.Conn_string);
             sqlConnection.Open();
 
-            // Query to get all members
+            //Query to get all members
             string query = "SELECT MemberId, First_Name, Last_Name, Email FROM Members";
             SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
 
-            // Use SqlDataAdapter to fill data into a DataTable
+            //Use SqlDataAdapter to fill data into a DataTable
             SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlCommand);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
 
-            // Assign the data to DataGridView to display
+            //update the data to DataGridView to display
             dataGridView1.DataSource = dataTable;
 
-            // Close the SQL connection
+            //Close the SQL connection
             sqlConnection.Close();
         }
 

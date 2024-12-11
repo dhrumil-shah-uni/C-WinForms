@@ -4,6 +4,7 @@
     {
         public Shop()
         {
+            //db can be implemented for dynamic shop items and info
             InitializeComponent();
         }
     }

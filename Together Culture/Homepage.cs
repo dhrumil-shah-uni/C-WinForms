@@ -60,6 +60,8 @@ namespace Together_Culture
         public Homepage(bool isAdmin)
         {
             InitializeComponent();
+
+            //Sets rounded border. Refer Title.cs for credits and info
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
@@ -68,15 +70,19 @@ namespace Together_Culture
 
             this.Select();
 
+            //If user is not an admin, Admin page will not be accessible
+            //Admin page will be removed from Searchbox, and Navigation bar
             if (!isAdmin)
             {
                 navlist.Items.Remove("Admin");
                 textBox1.AutoCompleteCustomSource.Remove("Admin");
             }
 
+            //Allows autocomplete in Searchbox
             textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
+        //To allow draggable window, and parameters for rounded corners
         private Point mouseLocation;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -92,6 +98,7 @@ namespace Together_Culture
 
         private void Homepage_Load(object sender, EventArgs e)
         {
+            //sets home panel (user control) at the start
             navlist.SelectedIndex = 0;
         }
 
@@ -113,6 +120,7 @@ namespace Together_Culture
 
         private void quit_clicked(object sender, EventArgs e)
         {
+            //Exits and logs out to Loginpage
             Loginpage login_new = new Loginpage();
             login_new.Show();
             this.Close();
@@ -120,6 +128,7 @@ namespace Together_Culture
 
         private void onSelectedChange(object sender, EventArgs e)
         {
+            //Controls visibility of different pages (implemented as user control) from the navigation pane
             shop1.Visible = false;
             home1.Visible = false;
             events1.Visible = false;
@@ -127,6 +136,8 @@ namespace Together_Culture
             blogs1.Visible = false;
             admin1.Visible = false;
 
+            //Changes the pages in the window according to user selection
+            //all the pages are implemented as User Controls and added to this Homepage
             switch (navlist.SelectedIndex)
             {
                 case 0:
@@ -164,6 +175,7 @@ namespace Together_Culture
             }
         }
 
+        //handles changing pages using Searchbox
         private void on_Enter_press(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -193,6 +205,7 @@ namespace Together_Culture
                         break;
 
                     case "admin":
+                        //checks and executes only if Admin exists in the list
                         if (navlist.Items.Count > 5) { navlist.SelectedIndex = 5; } else { MessageBox.Show("Invalid input."); }
                         break;
 

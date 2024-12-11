@@ -8,6 +8,8 @@ namespace Together_Culture
         public Loginpage()
         {
             InitializeComponent();
+
+            //To define a rounded border. See Title.cs for more details
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
@@ -32,8 +34,9 @@ namespace Together_Culture
         }
 
         private Point mouseLocation;
-        private bool isAdmin = false;
+        private bool isAdmin = false; //checks if the user is admin, and sends the parameter to Homepage
 
+        //Parameters for border
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -50,6 +53,7 @@ namespace Together_Culture
             errorlabel.Text = "";
         }
 
+        //To allow dragging the window
         private void mouse_Move(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -70,19 +74,24 @@ namespace Together_Culture
         {
             try
             {
-                Globals refresh_globals = new Globals();
-                refresh_globals.global_var();
-                SqlConnection conn = new SqlConnection(refresh_globals.Conn_string);
+                Globals refresh_globals = new Globals(); 
+                refresh_globals.global_var();  //Refresh the connection string in Global class
+
+                //Start a new SQL Connection to the database
+                SqlConnection conn = new SqlConnection(refresh_globals.Conn_string); //using the connection string from Global class
                 conn.Open();
+
+                //SQL query for checking if the email and password match with the database
                 String querytext = "SELECT COUNT(*) FROM Members WHERE Email=@email AND Password=@pass";
                 SqlCommand sqlcmd = new SqlCommand(querytext, conn);
-                sqlcmd.Parameters.AddWithValue("@email", emailbox.Text);
+                sqlcmd.Parameters.AddWithValue("@email", emailbox.Text); //shares the data in variable to the sql query
                 sqlcmd.Parameters.AddWithValue("@pass", passbox.Text);
 
-                int checker = (int)sqlcmd.ExecuteScalar();
+                int checker = (int)sqlcmd.ExecuteScalar(); //calls the SQL command
 
                 if (checker != 0)
                 {
+                    //Checks if the user is admin
                     String checkadmin_query = "SELECT MembershipType FROM Members WHERE Email=@email";
                     SqlCommand admincheck = new SqlCommand(checkadmin_query, conn);
                     admincheck.Parameters.AddWithValue("@email", emailbox.Text);
@@ -92,19 +101,20 @@ namespace Together_Culture
                         isAdmin = true;
                     }
                     errorlabel.Text = "Login Successful";
-                    Homepage Home = new Homepage(isAdmin);
+                    Homepage Home = new Homepage(isAdmin); //sends admin status to Homepage, and opens the Homepage form
                     Home.Show();
                     this.Close();
                 }
                 else
                 {
-                    errorlabel.Text = "Invalid Login";
+                    errorlabel.Text = "Invalid Login"; //if wrong credentials
                 }
 
                 conn.Close();
             }
             catch (Exception)
             {
+                //to handle database error
                 MessageBox.Show("Database Error", "Database Failure, Please check if database exists", MessageBoxButtons.OK);
 
                 throw;
@@ -113,9 +123,10 @@ namespace Together_Culture
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            errorlabel.Text = "Email Sent";
+            errorlabel.Text = "Email Sent"; //this can later be scaled to send an actual e-mail
         }
 
+        //handles Enter-key press to submit the credentials
         private void enter_pressed(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -125,6 +136,7 @@ namespace Together_Culture
             }
         }
 
+        //To move to password input box
         private void enter_pressed_email(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -134,11 +146,13 @@ namespace Together_Culture
             }
         }
 
+        //End the application
         private void exit_clicked(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //Shows visitor form to apply to be a member user
         private void visitorLink_clicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             VisitorForm visitorForm = new VisitorForm();

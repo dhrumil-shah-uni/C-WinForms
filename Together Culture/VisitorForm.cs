@@ -4,6 +4,7 @@
     {
         public VisitorForm()
         {
+            //Uses Visitor.cs user-defined Control
             InitializeComponent();
         }
 

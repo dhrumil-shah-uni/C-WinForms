@@ -5,11 +5,14 @@ namespace Together_Culture
 {
     public partial class Title : Form
     {
-        //Credit: https://stackoverflow.com/questions/18822067/rounded-corners-in-c-sharp-windows-forms/18822204
+        
 
         public Title()
         {
             InitializeComponent();
+
+            //Following code draws a curved border, purely design purposes
+            //Credit: https://stackoverflow.com/questions/18822067/rounded-corners-in-c-sharp-windows-forms/18822204
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
@@ -22,8 +25,11 @@ namespace Together_Culture
             }
         }
 
+        
+
         private Point mouseLocation;
 
+        //Parameters to draw the form border
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -37,18 +43,21 @@ namespace Together_Culture
 
         private void Title_Load(object sender, EventArgs e)
         {
+            //Loads the next page after a few seconds
             Timer titletime = new Timer();
             titletime.Interval = 2000;
             titletime.Tick += (source, e) =>
             {
+                //Goes to Login Page
                 Loginpage goto_login = new Loginpage();
                 goto_login.Show();
-                this.Hide();
+                this.Hide(); //Hides this form
                 titletime.Stop();
             };
             titletime.Start();
         }
 
+        //Code to allow dragging the window around the screen, even without a border
         private void mouse_Down(object sender, MouseEventArgs e)
         {
             mouseLocation = new Point(-e.X, -e.Y);
