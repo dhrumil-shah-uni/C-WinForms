@@ -75,7 +75,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(590, 730);
             panel1.TabIndex = 0;
-            
             // 
             // panel2
             // 
@@ -95,7 +94,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(590, 730);
             panel2.TabIndex = 3;
-            
             // 
             // linkLabel2
             // 
@@ -179,7 +177,7 @@
             button1.TabIndex = 3;
             button1.Text = "Log in";
             button1.UseVisualStyleBackColor = false;
-            
+            button1.Click += button1_Click;
             // 
             // linkLabel1
             // 
