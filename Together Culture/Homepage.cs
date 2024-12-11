@@ -9,6 +9,54 @@ namespace Together_Culture
             get { return navlist; }
         }
 
+        public Home Home
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Events Events
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Blogs Blogs
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Shop Shop
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Admin Admin
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public MembershipPage MembershipPage
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public Homepage(bool isAdmin)
         {
             InitializeComponent();

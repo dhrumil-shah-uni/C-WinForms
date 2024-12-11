@@ -15,6 +15,22 @@ namespace Together_Culture
             panel2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, 20, 20));
         }
 
+        public Homepage Homepage
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public VisitorForm VisitorForm
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private Point mouseLocation;
         private bool isAdmin = false;
 

@@ -6,5 +6,13 @@
         {
             InitializeComponent();
         }
+
+        public Visitor Visitor
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

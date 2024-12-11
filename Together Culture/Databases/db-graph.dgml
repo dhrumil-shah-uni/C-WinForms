@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Database" Category="Database" Bounds="-1.13686837721616E-13,-203.840120833267,1009.17333333333,717.68" Group="Expanded" Label="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&amp;quot;Z:\C# WinForms\Together Culture\Together Culture\Databases\together_culture.mdf&amp;quot;;Integrated Security=True" />
+    <Node Id="dbo" Category="Schema" Bounds="131.98181258,-163.840255954464,745.209708173334,657.680000588" Group="Expanded" Label="dbo" />
+    <Node Id="dbo.Announcements" Category="Table" Bounds="486.535145913333,275.959744437536,256.57,141.9200001176" Group="Expanded" Label="dbo.Announcements" />
+    <Node Id="dbo.Announcements_AnnouncementId" Category="Field Primary" Bounds="611.625145913333,371.919744506136,111.48,25.96" Description="int" Label="AnnouncementId" />
+    <Node Id="dbo.Announcements_Content" Category="Field Optional" Bounds="586.535145913333,315.959744466936,62.45,25.96" Description="ntext" Label="Content" />
+    <Node Id="dbo.Announcements_Scheduled" Category="Field Optional" Bounds="506.535145913333,371.919744515936,75.09,25.96" Description="datetime" Label="Scheduled" />
+    <Node Id="dbo.Announcements_Title" Category="Field Optional" Bounds="506.535145913333,315.959744476736,50,25.96" Description="nvarchar(50)" Label="Title" />
+    <Node Id="dbo.Events" Category="Table" Bounds="151.98181258,275.959744427736,304.553333333333,197.8800001568" Group="Expanded" Label="dbo.Events" />
+    <Node Id="dbo.Events_EventDesc" Category="Field Optional" Bounds="362.258479246666,315.959744466936,74.2766666666666,25.96" Description="ntext" Label="EventDesc" />
+    <Node Id="dbo.Events_EventID" Category="Field Primary" Bounds="171.98181258,315.959744466936,60.5566666666666,25.96" Description="int" Label="EventID" />
+    <Node Id="dbo.Events_EventImage" Category="Field Optional" Bounds="282.628479246666,371.919744506136,81.93,25.96" Description="image" Label="EventImage" />
+    <Node Id="dbo.Events_EventInfo" Category="Field Optional" Bounds="262.538479246666,315.959744466936,69.72,25.96" Description="ntext" Label="EventInfo" />
+    <Node Id="dbo.Events_EventName" Category="Field Optional" Bounds="171.98181258,371.919744506136,80.6466666666666,25.96" Description="nvarchar(50)" Label="EventName" />
+    <Node Id="dbo.Events_EventSchedule" Category="Field Optional" Bounds="171.98181258,427.879744545336,96.9733333333334,25.96" Description="datetime" Label="EventSchedule" />
+    <Node Id="dbo.MemberTags" Category="Table" Bounds="415.613027473333,-123.840255915264,196.5,141.9200001176" Group="Expanded" Label="dbo.MemberTags" />
+    <Node Id="dbo.MemberTags_MemTagID" Category="Field Primary" Bounds="435.613027473333,-27.8802558368642,77.11,25.96" Description="int" Label="MemTagID" />
+    <Node Id="dbo.MemberTags_MemberID" Category="Field Foreign" Bounds="515.613027473333,-83.8402558466642,76.5,25.96" Description="int" Label="MemberID" />
+    <Node Id="dbo.MemberTags_TagID" Category="Field Foreign" Bounds="435.613027473333,-83.8402558760642,50,25.96" Description="int" Label="TagID" />
+    <Node Id="dbo.Members" Category="Table" Bounds="152.02789414,48.0797442317358,273.846666666667,197.880000183621" Group="Expanded" Label="dbo.Members" />
+    <Node Id="dbo.Members_D_O_B" Category="Field Optional" Bounds="252.02789414,88.0797442709358,54.3,25.96" Description="datetime" Label="D_O_B" />
+    <Node Id="dbo.Members_Email" Category="Field" Bounds="172.02789414,88.0797442709358,50,25.96" Description="nvarchar(25)" Label="Email" />
+    <Node Id="dbo.Members_First_Name" Category="Field" Bounds="172.02789414,199.999744349336,78.7766666666667,25.96" Description="nvarchar(50)" Label="First_Name" />
+    <Node Id="dbo.Members_Last_Name" Category="Field" Bounds="277.181227473333,144.039744310136,77.5933333333333,25.96" Description="nvarchar(50)" Label="Last_Name" />
+    <Node Id="dbo.Members_MemberId" Category="Field Primary" Bounds="172.02789414,144.039744310136,75.1533333333334,25.96" Description="int" Label="MemberId" />
+    <Node Id="dbo.Members_MembershipType" Category="Field Optional" Bounds="280.804560806667,199.999744376157,111.5,25.96" Description="nvarchar(50)" Label="MembershipType" />
+    <Node Id="dbo.Members_Password" Category="Field" Bounds="336.32789414,88.0797442709358,69.5466666666666,25.96" Description="nvarchar(25)" Label="Password" />
+    <Node Id="dbo.Shop" Category="Table" Bounds="642.12818742,-123.840255728377,215.063333333334,197.880000196" Group="Expanded" Label="dbo.Shop" />
+    <Node Id="dbo.Shop_ItemID" Category="Field Primary" Bounds="662.12818742,-83.8402556499765,55.48,25.96" Description="int" Label="ItemID" />
+    <Node Id="dbo.Shop_ItemName" Category="Field Optional" Bounds="761.621520753333,-27.8802556238432,75.5700000000001,25.96" Description="nvarchar(50)" Label="ItemName" />
+    <Node Id="dbo.Shop_ItemPrice" Category="Field Optional" Bounds="662.12818742,-27.8802556107765,69.4933333333333,25.96" Description="money" Label="ItemPrice" />
+    <Node Id="dbo.Shop_ItemType" Category="Field Optional" Bounds="747.60818742,-83.8402556630432,68.6366666666667,25.96" Description="nvarchar(50)" Label="ItemType" />
+    <Node Id="dbo.Shop_Marketplace" Category="Field Optional" Bounds="662.12818742,28.0797444284235,85.25,25.96" Description="nvarchar(50)" Label="Marketplace" />
+    <Node Id="dbo.Tags" Category="Table" Bounds="456.496666666666,76.0597443395359,114.79,141.92" Group="Expanded" Label="dbo.Tags" />
+    <Node Id="dbo.Tags_TagID" Category="Field Primary" Bounds="476.496666666666,116.059744339536,50.0000000000001,25.96" Description="int" Label="TagID" />
+    <Node Id="dbo.Tags_Tag_Name" Category="Field Optional" Bounds="476.496666666666,172.019744339536,74.79,25.96" Description="nvarchar(50)" Label="Tag_Name" />
+  </Nodes>
+  <Links>
+    <Link Source="Database" Target="dbo" Category="Contains" />
+    <Link Source="dbo" Target="dbo.Announcements" Category="Contains" />
+    <Link Source="dbo" Target="dbo.Events" Category="Contains" />
+    <Link Source="dbo" Target="dbo.MemberTags" Category="Contains" />
+    <Link Source="dbo" Target="dbo.Members" Category="Contains" />
+    <Link Source="dbo" Target="dbo.Shop" Category="Contains" />
+    <Link Source="dbo" Target="dbo.Tags" Category="Contains" />
+    <Link Source="dbo.Announcements" Target="dbo.Announcements_AnnouncementId" Category="Contains" />
+    <Link Source="dbo.Announcements" Target="dbo.Announcements_Content" Category="Contains" />
+    <Link Source="dbo.Announcements" Target="dbo.Announcements_Scheduled" Category="Contains" />
+    <Link Source="dbo.Announcements" Target="dbo.Announcements_Title" Category="Contains" />
+    <Link Source="dbo.Events" Target="dbo.Events_EventDesc" Category="Contains" />
+    <Link Source="dbo.Events" Target="dbo.Events_EventID" Category="Contains" />
+    <Link Source="dbo.Events" Target="dbo.Events_EventImage" Category="Contains" />
+    <Link Source="dbo.Events" Target="dbo.Events_EventInfo" Category="Contains" />
+    <Link Source="dbo.Events" Target="dbo.Events_EventName" Category="Contains" />
+    <Link Source="dbo.Events" Target="dbo.Events_EventSchedule" Category="Contains" />
+    <Link Source="dbo.MemberTags" Target="dbo.MemberTags_MemTagID" Category="Contains" />
+    <Link Source="dbo.MemberTags" Target="dbo.MemberTags_MemberID" Category="Contains" />
+    <Link Source="dbo.MemberTags" Target="dbo.MemberTags_TagID" Category="Contains" />
+    <Link Source="dbo.MemberTags_MemberID" Target="dbo.Members_MemberId" Category="Foreign Key" Bounds="236.664217765067,-57.8809738421875,297.613579831359,196.953709254256" Label="FK_Members" />
+    <Link Source="dbo.MemberTags_TagID" Target="dbo.Tags_TagID" Category="Foreign Key" Bounds="463.294472451627,-57.881018470269,33.7472530680728,165.12303588406" Label="FK_Tags" />
+    <Link Source="dbo.Members" Target="dbo.Members_D_O_B" Category="Contains" />
+    <Link Source="dbo.Members" Target="dbo.Members_Email" Category="Contains" />
+    <Link Source="dbo.Members" Target="dbo.Members_First_Name" Category="Contains" />
+    <Link Source="dbo.Members" Target="dbo.Members_Last_Name" Category="Contains" />
+    <Link Source="dbo.Members" Target="dbo.Members_MemberId" Category="Contains" />
+    <Link Source="dbo.Members" Target="dbo.Members_MembershipType" Category="Contains" />
+    <Link Source="dbo.Members" Target="dbo.Members_Password" Category="Contains" />
+    <Link Source="dbo.Shop" Target="dbo.Shop_ItemID" Category="Contains" />
+    <Link Source="dbo.Shop" Target="dbo.Shop_ItemName" Category="Contains" />
+    <Link Source="dbo.Shop" Target="dbo.Shop_ItemPrice" Category="Contains" />
+    <Link Source="dbo.Shop" Target="dbo.Shop_ItemType" Category="Contains" />
+    <Link Source="dbo.Shop" Target="dbo.Shop_Marketplace" Category="Contains" />
+    <Link Source="dbo.Tags" Target="dbo.Tags_TagID" Category="Contains" />
+    <Link Source="dbo.Tags" Target="dbo.Tags_Tag_Name" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="Database" />
+    <Category Id="Field" />
+    <Category Id="Field Foreign" />
+    <Category Id="Field Optional" />
+    <Category Id="Field Primary" />
+    <Category Id="Foreign Key" />
+    <Category Id="Schema" />
+    <Category Id="Table" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Description" Label="Description" Description="Description" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Table" ValueLabel="True">
+      <Condition Expression="HasCategory('Table')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Schema" ValueLabel="True">
+      <Condition Expression="HasCategory('Schema')" />
+      <Setter Property="Background" Value="#FF7F9169" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="True">
+      <Condition Expression="HasCategory('Field')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Database" ValueLabel="True">
+      <Condition Expression="HasCategory('Database')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>

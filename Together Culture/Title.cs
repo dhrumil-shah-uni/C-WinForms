@@ -14,6 +14,14 @@ namespace Together_Culture
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
+        public Loginpage Loginpage
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private Point mouseLocation;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]

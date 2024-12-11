@@ -2,6 +2,14 @@ namespace Together_Culture
 {
     internal static class Program
     {
+        public static Title Title
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

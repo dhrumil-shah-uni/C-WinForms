@@ -18,6 +18,46 @@ namespace Together_Culture
             this.Select();
         }
 
+        public MemberManager MemberManager
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public AddTag AddTag
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Announce Announce
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public EventManager EventManager
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public ShopManager ShopManager
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void exit_clicked(object sender, EventArgs e)
         {
             Homepage? pForm = this.FindForm() as Homepage;

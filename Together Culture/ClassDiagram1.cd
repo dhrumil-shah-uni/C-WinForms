@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Together_Culture.AddTag">
+    <Position X="13.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAQAAAACAAAACAAAYAAAAEAAAAACAAAA=</HashCode>
+      <FileName>AddTag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Together_Culture.Admin">
+    <Position X="7.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAABAAACCAAAMgAICAAACCAIw6AAAAAAAAAAAAECA=</HashCode>
+      <FileName>Admin.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MemberManager" />
+      <Property Name="AddTag" />
+      <Property Name="Announce" />
+      <Property Name="EventManager" />
+      <Property Name="ShopManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Together_Culture.Announce">
+    <Position X="1.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAABACACCAAAACAIAIAAAAEAAAAAAAACA=</HashCode>
+      <FileName>Announce.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Together_Culture.Blogs">
+    <Position X="10.75" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8AAAAhAAACAAABAAAACBAAACAIAAAAAAAAAAAQBAAAA=</HashCode>
+      <FileName>Blogs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Together_Culture.Event_Info">
+    <Position X="19.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAFAAAACAAAACAAAIAAAAAAAAAQBAAAA=</HashCode>
+      <FileName>Event_Info.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Together_Culture.EventManager">
+    <Position X="10.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAIABACAACAAABCAIi4AAAAEAAAAAAAACA=</HashCode>
+      <FileName>EventManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Together_Culture.Events">
+    <Position X="16.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8wAACAAAACAAABAAAACAAAACAIAGCAAAAAAAAQAPAAA=</HashCode>
+      <FileName>Events.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Event_Info" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Together_Culture.Globals">
+    <Position X="16.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQgAAAAAAIAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Globals.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Together_Culture.Home">
+    <Position X="4.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/wAAIhABACAAAxAAAACIQAAC04A/AAgASRAoAYBPAJI=</HashCode>
+      <FileName>Home.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Together_Culture.Homepage">
+    <Position X="10.75" Y="16.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAARCAAggABBACAQQACAkWIAAAEEBAAAQRQwmA=</HashCode>
+      <FileName>Homepage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Home" />
+      <Property Name="Events" />
+      <Property Name="Blogs" />
+      <Property Name="Shop" />
+      <Property Name="Admin" />
+      <Property Name="MembershipPage" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Together_Culture.Loginpage">
+    <Position X="10.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEBIAAAAACCAABABBAzABCACAAC4AAgQgEAAAQAAAqA=</HashCode>
+      <FileName>Loginpage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Homepage" />
+      <Property Name="VisitorForm" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Together_Culture.MemberManager">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCAAAAAAACAAABAAAACAAABCIMg4AgAAEAAcAAAAACA=</HashCode>
+      <FileName>MemberManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Together_Culture.MembershipPage">
+    <Position X="13.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAAAAAACAAABAAAACBAAACIIALAAAAEAAEAQAAAAA=</HashCode>
+      <FileName>MembershipPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Together_Culture.Program">
+    <Position X="13.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Title" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Together_Culture.Shop">
+    <Position X="7.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAIhABASAAARAAAACIQABC8IA/AAAASAAiAQBBAAI=</HashCode>
+      <FileName>Shop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Together_Culture.ShopManager">
+    <Position X="4.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAIABAAAACAAABCIIgJAAAAEAAAAAAAACA=</HashCode>
+      <FileName>ShopManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Together_Culture.Title">
+    <Position X="13.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAACAAABABAACAAAACAACAAAEAAAAAAAAAAiA=</HashCode>
+      <FileName>Title.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Loginpage" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Together_Culture.Visitor">
+    <Position X="16.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACAAABACAACAAAACAAAIAAAAAEAQAQAAAAA=</HashCode>
+      <FileName>Visitor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Together_Culture.VisitorForm">
+    <Position X="13.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAAAAAAACAAAAKAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>VisitorForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Visitor" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

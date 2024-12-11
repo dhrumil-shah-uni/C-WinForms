@@ -7,6 +7,14 @@
             InitializeComponent();
         }
 
+        public Event_Info Event_Info
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void event1_click(object sender, EventArgs e)
         {
             String event_name = "null", event_desc = "null", event_info = "null";
