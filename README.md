@@ -1,5 +1,5 @@
 # Together Culture CRM Solution
-
+Refer to [https://github.com/dhrumil-shah-uni/Soft-Eng](https://github.com/dhrumil-shah-uni/Soft-Eng) for unmanaged raw files, and documents, and individual contributions.
 ## Overview
 Together Culture is a Community Interest Company dedicated to fostering a fairer, greener creative economy. This project involves developing a digital Customer Relationship Management (CRM) solution to replace the manual system, streamlining operations for both members and administrators.
 
