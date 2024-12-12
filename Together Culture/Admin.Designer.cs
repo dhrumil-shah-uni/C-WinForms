@@ -36,6 +36,8 @@
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
+            button4 = new Button();
+            button6 = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,6 +47,8 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel1.Controls.Add(button6, 2, 1);
+            tableLayoutPanel1.Controls.Add(button4, 0, 1);
             tableLayoutPanel1.Controls.Add(button9, 2, 2);
             tableLayoutPanel1.Controls.Add(button8, 1, 2);
             tableLayoutPanel1.Controls.Add(button7, 0, 2);
@@ -159,6 +163,33 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += mem_click;
             // 
+            // button4
+            // 
+            button4.Dock = DockStyle.Fill;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(3, 168);
+            button4.Name = "button4";
+            button4.Size = new Size(266, 159);
+            button4.TabIndex = 9;
+            button4.Text = "Approve Requests";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button6
+            // 
+            button6.Dock = DockStyle.Fill;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(547, 168);
+            button6.Name = "button6";
+            button6.Size = new Size(268, 159);
+            button6.TabIndex = 10;
+            button6.Text = "Donations";
+            button6.UseVisualStyleBackColor = true;
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -181,5 +212,7 @@
         private Button button3;
         private Button button2;
         private Button button1;
+        private Button button6;
+        private Button button4;
     }
 }

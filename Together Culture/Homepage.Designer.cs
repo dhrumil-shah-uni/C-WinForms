@@ -41,12 +41,12 @@
             title = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel3 = new Panel();
+            admin1 = new Admin();
             blogs1 = new Blogs();
             shop1 = new Shop();
             membershipPage1 = new MembershipPage();
             events1 = new Events();
             home1 = new Home();
-            admin1 = new Admin();
             navbar.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -74,7 +74,7 @@
             navlist.ForeColor = Color.FromArgb(253, 253, 253);
             navlist.FormattingEnabled = true;
             navlist.ItemHeight = 25;
-            navlist.Items.AddRange(new object[] { "Home", "Events", "Membership", "Shop", "Blogs", "Admin" });
+            navlist.Items.AddRange(new object[] { "Home", "Events", "Membership", "Shop", "Blogs", "Donation", "Places", "Admin" });
             navlist.Location = new Point(0, 0);
             navlist.Name = "navlist";
             navlist.Size = new Size(172, 623);
@@ -135,7 +135,7 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.AutoCompleteCustomSource.AddRange(new string[] { "Home", "Events", "Membership", "Shop", "Blogs", "Admin" });
+            textBox1.AutoCompleteCustomSource.AddRange(new string[] { "Home", "Events", "Membership", "Shop", "Blogs", "Donation", "Places", "Admin" });
             textBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             textBox1.BackColor = Color.FromArgb(253, 253, 253);
             textBox1.BorderStyle = BorderStyle.None;
@@ -196,6 +196,19 @@
             panel3.Size = new Size(1006, 623);
             panel3.TabIndex = 3;
             // 
+            // admin1
+            // 
+            admin1.AddTag = null;
+            admin1.Announce = null;
+            admin1.BackColor = Color.FromArgb(23, 23, 23);
+            admin1.EventManager = null;
+            admin1.Location = new Point(261, 4);
+            admin1.MemberManager = null;
+            admin1.Name = "admin1";
+            admin1.ShopManager = null;
+            admin1.Size = new Size(40, 40);
+            admin1.TabIndex = 5;
+            // 
             // blogs1
             // 
             blogs1.BackgroundImage = (Image)resources.GetObject("blogs1.BackgroundImage");
@@ -230,6 +243,7 @@
             // events1
             // 
             events1.BackColor = Color.Crimson;
+            events1.Event_Info = null;
             events1.Location = new Point(49, 4);
             events1.Margin = new Padding(3, 4, 3, 4);
             events1.Name = "events1";
@@ -244,14 +258,6 @@
             home1.Size = new Size(40, 40);
             home1.TabIndex = 0;
             home1.Visible = false;
-            // 
-            // admin1
-            // 
-            admin1.BackColor = Color.FromArgb(23, 23, 23);
-            admin1.Location = new Point(261, 4);
-            admin1.Name = "admin1";
-            admin1.Size = new Size(40, 40);
-            admin1.TabIndex = 5;
             // 
             // Homepage
             // 

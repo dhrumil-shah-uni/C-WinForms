@@ -166,6 +166,12 @@ namespace Together_Culture
                     break;
 
                 case 5:
+                    break;
+
+                case 6:
+                    break;
+
+                case 7:
                     admin1.Dock = DockStyle.Fill;
                     admin1.Visible = true;
                     break;
@@ -203,6 +209,11 @@ namespace Together_Culture
                     case "blogs":
                         navlist.SelectedIndex = 4;
                         break;
+
+                    case "donation":
+                        break;
+
+                    case
 
                     case "admin":
                         //checks and executes only if Admin exists in the list

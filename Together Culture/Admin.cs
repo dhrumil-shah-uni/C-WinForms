@@ -108,5 +108,10 @@ namespace Together_Culture
             ShopManager shopManager = new ShopManager();
             shopManager.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
